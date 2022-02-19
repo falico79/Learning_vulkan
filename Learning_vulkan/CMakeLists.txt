@@ -20,6 +20,6 @@ target_link_libraries(Learning_vulkan
 	PRIVATE ${Vulkan_LIBRARIES}
 	PRIVATE glm
 )
-include_directories(Learning_vulkan PRIVATE ${Vulkan_INCLUDE_DIRS})
+target_include_directories(Learning_vulkan PRIVATE ${Vulkan_INCLUDE_DIRS})
 
 # TODO: Add tests and install targets if needed.
