@@ -1,3 +1,6 @@
 [submodule "Learning_vulkan/external/glfw"]
 	path = Learning_vulkan/external/glfw
 	url = https://github.com/glfw/glfw.git
+[submodule "Learning_vulkan/external/glm"]
+	path = Learning_vulkan/external/glm
+	url = https://github.com/g-truc/glm.git

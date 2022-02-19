@@ -10,8 +10,11 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
+find_package(Vulkan REQUIRED)
+
 add_subdirectory(external/glfw)
 
-target_link_libraries(Learning_vulkan glfw)
+target_link_libraries(Learning_vulkan PRIVATE glfw ${Vulkan_LIBRARIES})
+include_directories(Learning_vulkan PRIVATE ${Vulkan_INCLUDE_DIRS})
 
 # TODO: Add tests and install targets if needed.
